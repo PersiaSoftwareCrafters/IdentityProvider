@@ -1,14 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
-using Shared.AspNetIdentity.Persistence.EntityFramework.Models;
 using Microsoft.EntityFrameworkCore;
+using Shared.Persistence.IdentityStore.Models;
 
-namespace Shared.AspNetIdentity.Persistence.EntityFramework.DbContexts
+namespace Shared.Persistence.IdentityStore.DbContexts
 {
     public class IdpDbContext: IdentityDbContext<IdpUser>
     {

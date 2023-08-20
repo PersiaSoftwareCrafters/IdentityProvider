@@ -15,9 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SecurityTokenService.Persis
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SecurityTokenService.Persistence.OperationalStore", "SecurityTokenService\SecurityTokenService.Persistence.OperationalStore\SecurityTokenService.Persistence.OperationalStore.csproj", "{E65F6E39-4822-4FC5-8B03-B680F518555D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared.AspNetIdentity.Persistence.EntityFramework", "Shared\Shared.AspNetIdentity.Persistence.EntityFramework\Shared.AspNetIdentity.Persistence.EntityFramework.csproj", "{D1BEFA17-ED80-46CE-9930-C40029608024}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Administration.Services", "Administration\Administration.Services\Administration.Services.csproj", "{9452DBFA-F839-4C9A-96D4-476291708368}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Administration.Services", "Administration\Administration.Services\Administration.Services.csproj", "{9452DBFA-F839-4C9A-96D4-476291708368}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared.Persistence.IdentityStore", "Shared\Shared.Persistence.IdentityStore\Shared.Persistence.IdentityStore.csproj", "{B1D42060-C0FB-4B33-8B84-74D4B0432CE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,14 +37,14 @@ Global
 		{E65F6E39-4822-4FC5-8B03-B680F518555D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E65F6E39-4822-4FC5-8B03-B680F518555D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E65F6E39-4822-4FC5-8B03-B680F518555D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D1BEFA17-ED80-46CE-9930-C40029608024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D1BEFA17-ED80-46CE-9930-C40029608024}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D1BEFA17-ED80-46CE-9930-C40029608024}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D1BEFA17-ED80-46CE-9930-C40029608024}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9452DBFA-F839-4C9A-96D4-476291708368}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9452DBFA-F839-4C9A-96D4-476291708368}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9452DBFA-F839-4C9A-96D4-476291708368}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9452DBFA-F839-4C9A-96D4-476291708368}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1D42060-C0FB-4B33-8B84-74D4B0432CE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1D42060-C0FB-4B33-8B84-74D4B0432CE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1D42060-C0FB-4B33-8B84-74D4B0432CE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1D42060-C0FB-4B33-8B84-74D4B0432CE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,8 +53,8 @@ Global
 		{CD88FE53-2B05-4577-9DD8-A8EE8F3CFDE3} = {7D0E1636-B959-429F-9126-EAD2D4F053AE}
 		{A9DBAB59-DE72-4606-BB5D-1D474F0B9998} = {7D0E1636-B959-429F-9126-EAD2D4F053AE}
 		{E65F6E39-4822-4FC5-8B03-B680F518555D} = {7D0E1636-B959-429F-9126-EAD2D4F053AE}
-		{D1BEFA17-ED80-46CE-9930-C40029608024} = {1B8BAC7D-774A-48C5-90E7-1169D7240875}
 		{9452DBFA-F839-4C9A-96D4-476291708368} = {A0BCE590-372E-4F96-8AA1-202A78C41CBF}
+		{B1D42060-C0FB-4B33-8B84-74D4B0432CE5} = {1B8BAC7D-774A-48C5-90E7-1169D7240875}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {108C7A6E-B0F5-4415-B7F3-21651CE03062}

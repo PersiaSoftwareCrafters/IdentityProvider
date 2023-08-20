@@ -4,9 +4,9 @@ using Microsoft.Extensions.DependencyInjection;
 using SecurityTokenService.Persistence.ConfigurationStore.Options;
 using SecurityTokenService.Persistence.OperationalStore.Options;
 using Serilog;
-using Shared.AspNetIdentity.Persistence.EntityFramework.DbContexts;
-using Shared.AspNetIdentity.Persistence.EntityFramework.Models;
-using Shared.AspNetIdentity.Persistence.EntityFramework.Options;
+using Shared.Persistence.IdentityStore.DbContexts;
+using Shared.Persistence.IdentityStore.Models;
+using Shared.Persistence.IdentityStore.Options;
 
 namespace SecurityTokenService.UI;
 
