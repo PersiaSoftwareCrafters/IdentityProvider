@@ -11,8 +11,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Infrastracture\SecurityTokenService.Persistence.ConfigurationStore\SecurityTokenService.Persistence.ConfigurationStore.csproj" />
-	  <ProjectReference Include="..\Infrastracture\SecurityTokenService.Persistence.OperationalStore\SecurityTokenService.Persistence.OperationalStore.csproj" />
+	  <ProjectReference Include="..\..\Shared\Shared.AspNetIdentity.Persistence.EntityFramework\Shared.AspNetIdentity.Persistence.EntityFramework.csproj" />
+	  <ProjectReference Include="..\SecurityTokenService.Persistence.ConfigurationStore\SecurityTokenService.Persistence.ConfigurationStore.csproj" />
+	  <ProjectReference Include="..\SecurityTokenService.Persistence.OperationalStore\SecurityTokenService.Persistence.OperationalStore.csproj" />
 	</ItemGroup>
 
 

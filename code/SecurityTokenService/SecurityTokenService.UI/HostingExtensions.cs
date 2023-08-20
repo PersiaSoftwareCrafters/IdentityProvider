@@ -1,7 +1,12 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using SecurityTokenService.Persistence.ConfigurationStore.Options;
 using SecurityTokenService.Persistence.OperationalStore.Options;
 using Serilog;
+using Shared.AspNetIdentity.Persistence.EntityFramework.DbContexts;
+using Shared.AspNetIdentity.Persistence.EntityFramework.Models;
+using Shared.AspNetIdentity.Persistence.EntityFramework.Options;
 
 namespace SecurityTokenService.UI;
 
@@ -13,9 +18,23 @@ internal static class HostingExtensions
 
         var operationalStoreOptions = builder.Configuration.GetSection("OperationalStore").Get<OperationalStoreOptions>();
 
-        builder.Services.AddRazorPages();
+        var identityStoreOptions = builder.Configuration.GetSection("IdentityStore").Get<IdentityStoreOptions>();
+
+        builder.Services.AddDbContext<IdpDbContext>(options =>
+            options.UseSqlServer(identityStoreOptions.ConnectionString,
+                x =>
+                {
+                    x.MigrationsAssembly(identityStoreOptions.MigrationsAssembly);
+                    x.MigrationsHistoryTable(identityStoreOptions.MigrationsHistoryTable, identityStoreOptions.Schema);
+                }
+            ));
+
+        builder.Services.AddIdentity<IdpUser,IdentityRole>()
+            .AddEntityFrameworkStores<IdpDbContext>()
+            .AddDefaultTokenProviders();
 
         builder.Services.AddIdentityServer()
+            .AddAspNetIdentity<IdpUser>()
             .AddConfigurationStore(options =>
             {
                 options.ConfigureDbContext = builder =>
@@ -37,6 +56,8 @@ internal static class HostingExtensions
             .AddInMemoryIdentityResources(Config.IdentityResources)
             .AddInMemoryApiScopes(Config.ApiScopes)
             .AddInMemoryClients(Config.Clients);
+
+        builder.Services.AddRazorPages();
 
         builder.Services.AddAuthentication();
 
